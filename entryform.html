@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>FORM</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
+		
+		<style>
+			
+			
+			body {font-family:sans-serif;
+			background-color:aqua;
+			width:40%;
+			margin:auto;
+			}
+			table {padding:0.5rem;
+			margin:0.5rem;
+			background-color:fuchsia;
+			}
+			label{color:white;
+			display:block;
+			}
+			input{width:90%;
+			margin:0.1rem;
+			}
+			
+			//-->
+		</style>
+	</head>
+ 
+ 
+ 
+ 
+	<body>
+	
+	
+	
+	<table border="8">
+	
+	<form action="mailto:jey@gmail.com" onsubmit="return validateForm(this);" method="post" id="myform" autocomplete="on">
+			 
+	
+    <tr>
+		<h1><b>Please fill this!</b></h1>
+        <td>
+            Title
+        </td>
+        <td>
+            <select name="Course" id="Course_ID">
+	<option value="" selected>Choose One:</option>
+	<option value="Mr">Mr.</option>
+	<option value="Ms">Ms.</option>
+	<option value="Mrs">Mrs.</option>
+	<option value="Dr">Dr</option>
+        </td>
+
+		<td>
+            <select name="Gender" id="gender">
+			<option value="1" >Male</option>
+			<option value="2">Female.</option>
+
+        </td>
+    </tr>
+	
+	
+    <tr>
+        <td>
+            First Name
+        </td>
+        <td>
+            
+			<input type="text" id="firstName" name="firstName" required maxlength="50" autofocus>
+        </td>
+        
+    </tr>
+	
+	
+    <tr>
+        <td>
+			Last Name 
+        </td>
+        <td>
+			<input type="text" id="lastName" name="lastName" required maxlength="50">
+        </td>
+        
+    </tr>
+	
+	
+    <tr>
+        <td>
+			Email Address
+        </td>
+        <td>
+			<input type = text name = "emailaddress" required maxlength="75"></input>
+        </td>
+    </tr>
+	
+	
+    <tr>
+        <td>
+			Gender 
+		</td>
+		<td>
+		Male <br>
+		Female
+		</td>
+        <td>
+			<input type="radio" name="gender" value="m">
+			<input type="radio" name="gender" value="f">
+        </td>
+        
+    </tr>
+	<br><br>
+	
+	<tr>
+		<td>
+			Choose DOB
+		</td>
+		<td>	
+			<input type="date" name="bday" max="2000-01-01" min="1970-01-01"><br>
+		</td>
+	
+    <tr>
+        <td>
+			Hobbies
+		</td>
+		<td>
+		Cycling <br>
+		Dancing <br>
+		Music <br>
+		Running <br>
+		</td>
+		
+		
+		
+        <td>
+		<form action="/action_page.php" method="get">
+  <input type="checkbox" name="" value="Cycling">
+  <input type="checkbox" name="" value="Dancing">
+   <input type="checkbox" name="" value="Music">
+  <input type="checkbox" name="" value="Running">
+  
+</form>
+        </td>
+        
+    </tr>
+	
+	<tr>
+	<td> Phone Number
+	</td>
+	
+	<td>
+		<input type="tel" pattern="[689][0-9]{8}" id="phone" name="phone">
+	</td>
+	
+	</tr>
+	
+	
+    <tr>
+        <td>
+        </td>
+        <td>
+			<input type="submit" name="Submit" value="Submit">
+			<input type="reset" name="Reset" value="Reset">
+        </td>
+        
+    </tr>
+</table>
+	
+	
+	</body>
+</html>
