@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Local Storage - Demo</title>
+	</head>
+	<body>
+		<div id="counter"></div>
+		
+		<button id="set">Set</button><br/>
+		<button id="increment">Increment</button><br/>
+		<button id="decrement">Decrement</button><br/>
+		<button id="reset">Reset</button>
+		 
+		<script>
+			 
+			function setCounter() {
+				localStorage.setItem('counter', 1);
+				document.getElementById('counter').innerHTML = "Counter Value = 1"; 
+			}
+			
+			function incrementCounter() {
+				var n = localStorage.getItem('counter');
+			 
+				if (n === null) {
+					alert ("Set counter before increment");
+					return;
+				}
+			 
+				n++;
+				localStorage.setItem('counter', n);
+				document.getElementById('counter').innerHTML = "Counter Value = " + n;
+			}
+			
+			function decrementCounter() {
+				var n = localStorage.getItem('counter');
+			 
+				if (n === null) {
+					alert ("Set counter before decrement");
+					return;
+				}
+			 
+				n--;
+				localStorage.setItem('counter', n);
+				document.getElementById('counter').innerHTML = "Counter Value = " + n;
+			}
+			
+			function resetCounter() {
+				localStorage.removeItem('counter');
+				document.getElementById('counter').innerHTML = "" ;
+			}
+			
+			document.getElementById('set').addEventListener('click', setCounter);
+			document.getElementById('increment').addEventListener('click', incrementCounter);
+			document.getElementById('decrement').addEventListener('click', decrementCounter);
+			document.getElementById('reset').addEventListener('click', resetCounter);
+		</script>
+	</body>
+</html>

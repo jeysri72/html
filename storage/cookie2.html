@@ -1,0 +1,92 @@
+<html>
+   <head>
+      
+      <script type = "text/javascript">
+         <!--
+            function setCookie()
+            {
+				
+				if( document.myform.name.value == "" ){
+					alert("Your cookie name please!");
+					return;
+				}
+				
+				if( document.myform.value.value == "" ){
+					alert("Your cookie value please!");
+					return;
+				}
+				
+				//escape special characters like space, ;, etc
+				var name = escape(document.myform.name.value);
+				
+				//escape special characters like space, ;, etc
+				var value = escape(document.myform.value.value);
+				
+				var date = new Date();
+				date.setTime(date.getTime()+(2*24*60*60*1000));
+				var expires = "expires="+date.toGMTString();
+				
+				var strCookie = name + "=" + value + ";" + expires + "; path=/"
+				document.cookie = strCookie;
+				
+            }
+			
+			function readCookie()
+            {
+               var allcookies = document.cookie;
+			   var htmlString = "Cookies Set: <br/>";
+
+               var name = ""; value = "";
+			   
+               // Get all the cookies pairs in an array
+               cookiearray = allcookies.split(';');
+               
+               // Now take key value pair out of this array
+               for(var i=0; i<cookiearray.length; i++){
+					var cookieItem = cookiearray[i];
+					
+					name = cookieItem.split('=')[0];
+					// unescape to characters
+					value = unescape(cookieItem.split('=')[1]);
+					
+					htmlString += "Key: " + name + " <br/> Value: " + value + "<br/> <br/>";
+               }
+			   document.getElementById("cookie").innerHTML = htmlString;
+
+            }
+			
+			function resetCookie() {
+				if( document.myform.name.value == "" ){
+					alert("Enter cookie name to reset");
+					return;
+				}
+				
+				//escape special characters like space, ;, etc
+				var name = escape(document.myform.name.value);
+				
+				var date = new Date();
+				var expires = "expires="+ date.toGMTString();
+                document.cookie = name + '="";' + expires + ';';
+			   
+			}
+         //-->
+      </script>
+      
+   </head>
+   
+   <body>
+   
+		<form name="myform" action="">
+			Enter cookie name:<input type="text" name="name"/>
+			<br/>
+			Enter cookie value:<input type="text" name="value"/>
+			<br/>
+			<div id="cookie"> </div>
+			
+			<input type="button" value="Set Cookie" onclick="setCookie();"/>
+			<input type="button" value="get Cookie" onclick="readCookie();"/>
+			<input type="button" value="Reset Cookie" onclick="resetCookie();"/>
+		</form>
+   
+   </body>
+</html>

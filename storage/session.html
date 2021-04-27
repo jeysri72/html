@@ -1,0 +1,63 @@
+<html>
+   <head>
+      
+      <script type = "text/javascript">
+         <!--
+            function setSession(key, value)
+            {
+				if( key == "" ){
+					alert("Your session key please!");
+					return;
+				}
+				
+				if( value == "" ){
+					alert("Your session value please!");
+					return;
+				}
+				sessionStorage.setItem(key, value );
+				
+            }
+			
+			function getSession(key)
+            {
+               if( key == "" ){
+					alert("Your session key please!");
+					return;
+				}
+               
+				value = sessionStorage.getItem(key);
+				
+                document.getElementById("session").innerHTML = value;
+            }
+			
+			function resetSession(key)
+            {
+               if( key == "" ){
+					alert("Your session key please!");
+					return;
+				}
+               
+				value = sessionStorage.removeItem(key);
+			}
+         //-->
+      </script>
+      
+   </head>
+   
+   <body>
+   
+      <form name="myform" action="">
+			Session Key:<input type="text" name="session_key"/>
+			<br/>
+			Session Value:<input type="text" name="session_value"/>
+			<br/>
+			<div id="session"> </div>
+			
+			<input type="button" value="Set Session Item" onclick="setSession(session_key.value, session_value.value);"/>
+			<input type="button" value="Get Session Item" onclick="getSession(session_key.value);"/>
+			<input type="button" value="Remove Session Item" onclick="resetSession(session_key.value);"/>
+			<input type="button" value="Remove All" onclick="sessionStorage.clear();"/>
+		</form>
+   
+   </body>
+</html>

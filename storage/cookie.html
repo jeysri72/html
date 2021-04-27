@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Cookie - Demo</title>
+	</head>
+	<body>
+		<div id="counter"></div>
+		
+		<button id="set">Set</button><br/>
+		<button id="get">Get</button><br/>
+		<button id="reset">Reset</button>
+		 
+		<script>
+			 
+			function setCookie() {
+				name = prompt("Your name please?");
+				document.cookie="name=" + name;
+			}
+			
+			function getCookie() {
+				var name = document.cookie;
+			 
+				if (name === null || name === "") {
+					alert ("Set cookie first");
+					return;
+				}
+			 
+				document.getElementById('counter').innerHTML =  name;
+			}
+			
+			
+			function resetCookie() {
+				document.cookie = 'name="";';
+			}
+			
+			document.getElementById('set').addEventListener('click', setCookie);
+			document.getElementById('get').addEventListener('click', getCookie);
+			document.getElementById('reset').addEventListener('click', resetCookie);
+		</script>
+	</body>
+</html>
