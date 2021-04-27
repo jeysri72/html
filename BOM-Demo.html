@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var myWindow;
+
+function openWindow() {
+    window.open("http://www.lithan.com");
+}
+
+function openWindow2() {
+    window.open("http://www.lithan.com","_blank","toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=400, height=400");
+}
+
+
+function blankWindow() {
+    myWindow = window.open("", "", "width=400, height=200");
+    myWindow.blur();
+}
+function blurWindow() {
+    myWindow.blur();
+}
+function focusWindow() {
+    myWindow.focus();
+}
+function newWindow() {
+    var myWindow = window.open("", "", "width=400, height=200");
+    myWindow.opener.document.getElementById("demo").innerHTML = 
+    "A new window has been opened.";
+}
+
+function screenSize(){
+	var screenWidth = screen.width;
+	var screenHeight = screen.height;
+	var availWidth = window.innerWidth;
+	var availHeight = window.innerHeight;
+	document.getElementById("demo").innerHTML = 
+				"Screen width - " + screenWidth + "<br/>" +
+				"Screen height - " + screenHeight  + "<br/>" +
+				"Inner width - " + availWidth + "<br/>" +
+				"Innner height - " + availHeight  + "<br/>";
+}
+
+function displayLocation(){
+	document.getElementById("demo").innerHTML = 
+			"Protocol -" + window.location.protocol + "<br/>" +
+			"Domain - " + window.location.hostname + "<br/>" +
+			"Page path - " + window.location.pathname + "<br/>" +
+			"Full URL - " +  window.location.href ;
+			
+}
+
+function historyLength(){
+	document.getElementById("demo").innerHTML = history.length;
+}
+
+function goBack() {
+    window.history.back()
+}
+
+function goForward() {
+    window.history.forward()
+}
+
+function navigationInfo(){
+	document.getElementById("demo").innerHTML = 
+			"Navigator platform - " + navigator.platform; + "<br/>" +
+			"Navigator AppCodeName - " + navigator.appCodeName + "<br/>" +
+			"isCookieEnabled - " + navigator.cookieEnabled + "<br/>" +
+			"isJavaEnabled - " + navigator.javaEnabled() ;
+			
+}
+
+</script>
+</head>
+
+<body>
+<form>
+
+<input type="button" value="Blank new window" onclick="blankWindow()"> <br/>
+<input type="button" value="Blur new window" onclick="blurWindow()"> <br/>
+<input type="button" value="Focus new window" onclick="focusWindow()"> <br/>
+<input type="button" value="New Window with text" onclick="newWindow()"><br/>
+
+<input type="button" value="Open Window" onclick="openWindow()"><br/>
+<input type="button" value="Open Window - Specific Size" onclick="openWindow2()"><br/>
+
+<input type="button" value="Screen Size" onclick="screenSize()"> <br/>
+
+<input type="button" value="Display Location" onclick="displayLocation()"> <br/>
+<input type="button" value="HIstory Length" onclick="historyLength()"> <br/>
+
+<button onclick="goForward()">Go Forward</button> <br/>
+<button onclick="goBack()">Go Back</button> <br/>
+
+<button onclick="navigationInfo()">Show Navigation Info</button> <br/>
+
+
+<p id="demo"></p>
+
+</form>
+</body>
+
+</html>

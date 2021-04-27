@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+<form>
+
+
+
+<input type="button" value="Display Location" onclick="displayLocation()"> <br/>
+<input type="button" value="HIstory Length" onclick="historyLength()"> <br/>
+
+<button onclick="goForward()">Go Forward</button> <br/>
+<button onclick="goBack()">Go Back</button> <br/>
+
+<button onclick="navigationInfo()">Show Navigation Info</button> <br/>
+
+
+<p id="demo"></p>
+
+<button onclick="displayCookie()">Display Cookie</button>
+
+<script>
+function displayCookies() {
+    document.getElementById("demo").innerHTML =
+    "Cookies associated with this document: " + document.cookie;
+}
+
+
+function screenSize(){
+	var screenWidth = screen.width;
+	var screenHeight = screen.height;
+	var availWidth = window.innerWidth;
+	var availHeight = window.innerHeight;
+	document.getElementById("demo").innerHTML = 
+				"Screen width - " + screenWidth + "<br/>" +
+				"Screen height - " + screenHeight  + "<br/>" +
+				"Inner width - " + availWidth + "<br/>" +
+				"Innner height - " + availHeight  + "<br/>";
+}
+
+function displayLocation(){
+	document.getElementById("demo").innerHTML = 
+			"Domain - " + document.domain + "<br/>" +
+			"Base URI - " + document.baseURI + "<br/>" +
+			"Document URI - " + document.documentURI + "<br/>" +
+			"URL - " +  document.URL ;
+			
+}
+
+function historyLength(){
+	document.getElementById("demo").innerHTML = history.length;
+}
+
+function goBack() {
+    window.history.back()
+}
+
+function goForward() {
+    window.history.forward()
+}
+
+function navigationInfo(){
+	var htmlString = "Navigator platform - " + navigator.platform; + "<br/>" +
+			"Navigator AppCodeName - " + navigator.appCodeName + "<br/>" +
+			"isCookieEnabled - " + navigator.cookieEnabled + "<br/>" +
+			"isJavaEnabled - " + navigator.javaEnabled() ;
+			
+	document.getElementById("demo").innerHTML = htmlString;
+			
+}
+
+</script>
+
+</body>
+</html>
