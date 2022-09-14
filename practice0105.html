@@ -1,0 +1,61 @@
+<!-- Increase the size of data entry to make it user friendly 
+     Gain the user attraction by making the input button to standout 
+     Format the image to avoid vertical scrolling to gain user attention -->
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Alice</title>
+        <style>
+            body {      
+                text-align: center;         /* Align the body in the center */
+                /* background: black;         Set black color background */
+                background: url("/assets/background.png"); /* replace the color with background image */
+                background-size: cover;      /* cover the full page */       
+                background-position: center; /* Position it center */
+                color: white;             /* Set contrast white foreground */                                         
+                font-family: helvetica;     /* Choose the desireable font */
+            }
+            
+            h1 {    
+                text-align: center;         /* Align the header text in the center */
+            }
+
+            p {
+                text-align: center;          /* Align the paragraph text in the right */
+            }
+
+            img {
+                margin: 20px 0px 0px 0px;   /* Leave space from the Top, Right, Bottom, Left */
+                border: 10px solid white; /* Outline the image using the border */      
+                border-radius: 100px;       /* Round the edge by applying corner radius */
+                width: 250px;               /* Fixed width */
+                height: 250px;              /* Fixed height */  
+                /*height: inherit;             Inherit will take the ratio of the original image */
+               
+            }
+
+            input {
+                border: 0;                  /* Make the input as borderless */          
+                padding: 10px;              /* Leave whitespaces around the content */
+                font-size: 18px;            /* Make the font sise is bigger */
+            }
+
+            input[type="submit"] {          /* Style specific to the submit button */
+                background: blue;         /* Make contrast background blue color */
+                color: white;             /* Make contrast white color text   */
+            }
+        </style>
+    </head>
+
+    <body>
+        <img src="/assets/alice.png">   <!-- Include your image -->
+        <h1>Alice</h1>  <!-- Your Name -->    
+        <p>Hi! I'am Alice, in wonderland</p> <!-- Describe about yourself in a paragraph -->
+        <input type="email" placeholder="Your email">   <!--Enter email address to send a query 
+                                                             placehoder attribute give user guidance-->
+        <input type="submit"> <!-- Action button to submit the query -->
+    </body>
+
+</html>
+       

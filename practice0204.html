@@ -1,0 +1,134 @@
+<!-- Create the blog -->
+     <!DOCTYPE html>
+     <html>
+          <head>
+             <title>Alice Blog</title>
+             <link href="styles/normalize.css" rel="stylesheet">
+             <!-- It is a small CSS file that provides better cross-browser consistency
+                  in the default styling of HTML elements. 
+                  It’s a modern, HTML5-ready, alternative to the traditional CSS reset.
+                  Ref: https://github.com/necolas/normalize.css     
+             -->
+             <style>
+                 header {      
+                     text-align: center;         /* Align the header in the center */
+                     /* background: black;         Set black color background */
+                     background: url("/assets/background.png"); /* Header background image */
+                     background-size: cover;      /* cover the width */       
+                     background-position: center; /* Position it center */
+                     color: white;             /* Set contrast white foreground */                                         
+                     font-family: helvetica;     /* Choose the desireable font */
+                 }
+
+                ul{
+                    padding: 10px;                 /* Leave spaces */ 
+                    padding-left: 0px
+                }
+                li{
+                    display: inline;              /* Display the list items in line */  
+                    padding: 0px 20px 0px 20px;   /* Leave spaces between the links */
+                }
+                a{
+                    color: white;               /* Change the color of anchor link */
+                }
+
+                 h1 {       
+                    font-size: 72px;             /* Override the default font size */
+                     text-align: center;         /* Align the header text in the center */
+                 }
+     
+                 article h1{
+                     text-align: left;           /* Align the header to left if it is inside article */
+                 }
+
+                 img {
+                     margin: 20px 0px 0px 0px;   /* Leave space from the Top, Right, Bottom, Left */
+                     border: 10px solid white; /* Outline the image using the border */      
+                     border-radius: 100px;       /* Round the edge by applying corner radius */
+                     width: 250px;               /* Fixed width */
+                     height: 250px;              /* Fixed height */  
+                     /*height: inherit;             Inherit will take the ratio of the original image */
+                    
+                 }
+     
+                 input {
+                     border: 0;                  /* Make the input as borderless */          
+                     padding: 10px;              /* Leave whitespaces around the content */
+                     font-size: 18px;            /* Make the font sise is bigger */
+                 }
+     
+                 input[type="submit"] {          /* Style specific to the submit button */
+                     background: blue;         /* Make contrast background blue color */
+                     color: white;             /* Make contrast white color text   */
+                 }
+
+                /* Make the page is responsive using media query */ 
+                @media  (max-width: 480px) {    /* Screen size maximum 480px */  
+                    h1 {
+                        font-size: 36px;        /* Reduce the font size when the screensize is small */
+                        padding: 5px;
+                    }
+                    li {
+                        padding: 5px;
+                        display: block;
+                    }
+                }
+
+                @media (min-width: 480px) and (max-width: 720px) { /* Screen size etween 480px  and 720px */
+                    h1 {
+                        font-size: 48px;        /* Reduce the font size when the screensize is small */
+                        padding: 5px;
+                    }
+                    li {
+                        padding: 5px;
+                        display: block;
+                    }
+                }
+             </style>
+         </head>
+     
+         <body>
+            <header>
+              <img src="/assets/alice.png">   <!-- Include your image -->
+              <h1>Alice's Blog</h1>  <!-- Heading for the blog -->   
+              <!-- Navigational Links for the blog--> 
+              <ul> 
+                <!-- Link with external Pages -->
+                <li><a href="practice0204.html">About Me</a></li>
+                <li><a href="practice0204-characters.html">Other Characters</a></li>
+                <li><a href="practice0204-songs.html">Songs</a></li>
+              </ul>
+              
+            </header>
+
+            <main>
+                <article>
+                    <h1>Alice Adventures in Wonderland </h1>
+                    <p>
+                        Alice's Adventures in Wonderland (commonly Alice in Wonderland) is an 1865 English children's novel by Lewis Carroll. A young girl named Alice falls through a rabbit hole into a fantasy world of anthropomorphic creatures. It is seen as an example of the literary nonsense genre.         
+                    </p>
+                    <p>
+                        One of the best-known works of Victorian literature, its narrative, structure, characters and imagery have had huge influence on popular culture and literature, especially in the fantasy genre.[1][2] The book has never been out of print and has been translated into 174 languages. Its legacy covers adaptations for screen, radio, art, ballet, opera, musicals, theme parks, board games and video games.[3] Carroll published a sequel in 1871 entitled Through the Looking-Glass and a shortened version for young children, The Nursery "Alice", in 1890.
+                    </p>
+                </article>
+                   
+                <article>
+                    <h1>Background</h1>
+                    <p>
+                        Alice's Adventures in Wonderland was inspired when, on 4 July 1862, Lewis Carroll and Reverend Robinson Duckworth rowed up The Isis in a boat with three young girls.[4][5] The three girls were the daughters of scholar Henry Liddell: Lorina Charlotte Liddell (aged 13; "Prima" in the book's prefatory verse); Alice Pleasance Liddell (aged 10; "Secunda" in the verse); and Edith Mary Liddell (aged 8; "Tertia" in the verse).[6]
+                    </p>   
+                    <p> 
+                        The journey began at Folly Bridge, Oxford, and ended 5 miles (8.0 km) away in Godstow, Oxfordshire. During the trip Dodgson told the girls a story that he described in his diary as "Alice's Adventures Under Ground" and which his diary says he "undertook to write out for Alice".[7] Alice Liddell recalled that she asked Dodgson to write it down: unlike other stories he had told her, this one she wanted to preserve.[8] She finally got the manuscript more than two years later.[9]
+                    </p>
+                    <p>
+                        4 July was known as the "golden afternoon", prefaced in the novel as a poem.[10] In fact, the weather around Oxford on 4 July was "cool and rather wet", although at least one scholar has disputed this claim.[11] Scholars debate whether Carroll in fact came up with Alice during the "golden afternoon" or whether the story was developed over a longer period.[10]
+                    </p>
+                    <p>        
+                        Carroll had known the Liddell children since around March 1856, when he befriended Harry Liddell.[12] He met Lorina by early March as well.[13] In June 1856, he took the children out on the river.[14] Robert Douglas-Fairhurst, who wrote a literary biography of Carroll, suggests that Carroll favoured Alice Pleasance Liddell in particular because her name was ripe for allusion.[15] "Pleasance" means pleasure and the name "Alice" appeared in contemporary works including the poem "Alice Gray" by William Mee, of which Carroll wrote a parody; and Alice is a character in "Dream-Children: A Reverie", a prose piece by Charles Lamb.[15] Carroll, an amateur photographer by the late 1850s,[16] produced many photographic portraits of the Liddell children—but none more than Alice, of whom 20 survive.[17]
+                    </p>
+                </article>
+            </main>
+         </body>
+     
+     </html>
+            

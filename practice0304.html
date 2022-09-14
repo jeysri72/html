@@ -1,0 +1,56 @@
+<!-- Create Resturant menu list -->
+<!-- Add div container to display the menu with fixed height container -->
+<!-- Add the backgroung image -->
+<!--
+    issue 1 - image repeated multiple times to fill the width
+                 /* resolution 1 - stop repeating using background-size  */
+    issue 2 - image covered the text
+    issue 3 - Same image for all the receipe
+-->
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Alice Resturant</title>
+        <link href="styles/normalize.css" rel="stylesheet">
+        <!-- It is a small CSS file that provides better cross-browser consistency
+                in the default styling of HTML elements. 
+                It’s a modern, HTML5-ready, alternative to the traditional CSS reset.
+                Ref: https://github.com/necolas/normalize.css     
+                -->
+
+        <style>
+            body {
+                font-family: helvetica, sans-serif;
+                max-width: 600px;   /* fix max width of the screen */
+                margin: 0px auto;   /* margin of the body */ 
+            }
+
+            div{   
+                height: 200px;  /* add div container around menu items and fix the height */
+                background: url("/assets/alice-springs-chicken.jpg"); /* add the background image */
+                background-size: cover;  /* resolution 1 - strech the image to full width and Stop tiling and appear one time */
+                /*background-repeat: no-repeat;  /* resolution 2 - stop repeating */
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <h1>Alice Restaurant</h1>
+        <div>
+            <h2>Alice Spring Chicken $14</h2>
+            <p>Marinated chicken breasts with bacon and cheese are grilled and served with sautéed mushrooms and honey mustard dressing. Broiling chicken in this manner is a fantastic method to add that extra something!</p>
+        </div>  
+        
+        <div>
+            <h2>Brandied Candied Sweet Potatoes $8</h2>
+            <p>Because it differs from the usual mashed sweet potato recipes, this has been a Thanksgiving favorite of ours for many years.</p>
+        </div>
+
+        <div>
+            <h2>Chocoloate Wraps $10</h2>
+            <p>When I needed a distinctive, quick dessert for a special meal, I came up with this chocolate and peanut butter treat. The filled tortillas just take a few minutes to grill and have a chewy texture thanks to the marshmallows. Laurie Gwaltney (Laurie Gwaltney)</p>
+        </div>
+    </body>
+</html>

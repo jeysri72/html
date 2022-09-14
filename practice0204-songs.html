@@ -1,0 +1,137 @@
+<!-- Create the blog -->
+     <!DOCTYPE html>
+     <html>
+          <head>
+             <title>Alice Blog</title>
+             <link href="styles/normalize.css" rel="stylesheet">
+             <!-- It is a small CSS file that provides better cross-browser consistency
+                  in the default styling of HTML elements. 
+                  It’s a modern, HTML5-ready, alternative to the traditional CSS reset.
+                  Ref: https://github.com/necolas/normalize.css     
+             -->
+
+             <style>
+                 header {      
+                     text-align: center;         /* Align the header in the center */
+                     /* background: black;         Set black color background */
+                     background: url("/assets/background.png"); /* Header background image */
+                     background-size: cover;      /* cover the width */       
+                     background-position: center; /* Position it center */
+                     color: white;             /* Set contrast white foreground */                                         
+                     font-family: helvetica;     /* Choose the desireable font */
+                 }
+
+                ul{
+                    padding: 10px;                 /* Leave spaces */ 
+                    padding-left: 0px
+                }
+                li{
+                    display: inline;              /* Display the list items in line */  
+                    padding: 0px 20px 0px 20px;   /* Leave spaces between the links */
+                }
+                a{
+                    color: white;               /* Change the color of anchor link */
+                }
+
+                 h1 {       
+                    font-size: 72px;             /* Override the default font size */
+                     text-align: center;         /* Align the header text in the center */
+                 }
+     
+                 article h1{
+                     text-align: left;           /* Align the header to left if it is inside article */
+                 }
+
+                 img {
+                     margin: 20px 0px 0px 0px;   /* Leave space from the Top, Right, Bottom, Left */
+                     border: 10px solid white; /* Outline the image using the border */      
+                     border-radius: 100px;       /* Round the edge by applying corner radius */
+                     width: 250px;               /* Fixed width */
+                     height: 250px;              /* Fixed height */  
+                     /*height: inherit;             Inherit will take the ratio of the original image */
+                    
+                 }
+     
+                 input {
+                     border: 0;                  /* Make the input as borderless */          
+                     padding: 10px;              /* Leave whitespaces around the content */
+                     font-size: 18px;            /* Make the font sise is bigger */
+                 }
+     
+                 input[type="submit"] {          /* Style specific to the submit button */
+                     background: blue;         /* Make contrast background blue color */
+                     color: white;             /* Make contrast white color text   */
+                 }
+                /* 
+                    iframe{
+                    width: 100%; 
+                    height: 50%; 
+                    overflow: hidden;
+                    } 
+                */
+
+                iframe{
+                    width: 50vw; 
+                    height: 50vh; 
+                    overflow: auto;
+                } 
+
+
+                /* Make the page is responsive using media query */ 
+                @media  (max-width: 480px) {    /* Screen size maximum 480px */  
+                    h1 {
+                        font-size: 36px;        /* Reduce the font size when the screensize is small */
+                        padding: 5px;
+                    }
+                    li {
+                        padding: 5px;
+                        display: block;
+                    }
+
+                }
+
+                @media (min-width: 480px) and (max-width: 720px) {   /* Screen size etween 480px  and 720px */
+                    h1 {
+                        font-size: 48px;        /* Reduce the font size when the screensize is small */
+                        padding: 5px;
+                    }
+                    li {
+                        padding: 5px;
+                        display: block;
+                    }
+
+                }
+             </style>
+         </head>
+     
+         <body>
+            <header>
+              <img src="/assets/alice.png">   <!-- Include your image -->
+              <h1>Alice's Blog</h1>  <!-- Heading for the blog -->   
+              <!-- Navigational Links for the blog--> 
+              <ul> 
+                <!-- Link with external Pages -->
+                <li><a href="practice0204.html">About Me</a></li>
+                <li><a href="practice0204-characters.html">Other Characters</a></li>
+                <li><a href="practice0204-songs.html">Songs</a></li>
+              </ul>
+              
+            </header>
+
+            <main>
+                <article>
+                    <h1>Alice in Wonderland - The unbirthday song</h1>
+                   
+                    <iframe width="420" height="345" src="https://www.youtube.com/embed/c_7Q6dCS-e0?autoplay=1&mute=1">
+                        
+                    </iframe>
+                    <hr>
+                    <button>Like</button>
+                </article>  
+                
+                
+            </main>
+         </body>
+     
+     </html>
+            
